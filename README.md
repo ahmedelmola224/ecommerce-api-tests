@@ -3,38 +3,25 @@
 This project is an automated API testing framework designed for verifying authentication and end-to-end user workflows in an e-commerce system. It uses **Java**, **Rest Assured**, **Cucumber**, and **JUnit** to structure and execute test scenarios in a BDD (Behavior-Driven Development) style.
 
 ---
-
-## Table of Contents
-
-- [Features](#-features)
-- [Tech Stack](#-tech-stack)
-- [Project Structure](#-project-structure)
-- [Setup Instructions](#-setup-instructions)
-- [How to Run Tests](#-how-to-run-tests)
-- [Test Scenarios](#-test-scenarios-covered)
-- [Reports](#-reports)
-- [Contributing](#-contributing)
-
----
-
 ## ⭐ Features
 
-- 🔐 **Authentication** (Login with positive and negative test cases)
-- 🚀 **End-to-End Flow**:
+-  **Authentication** (Login with positive and negative test cases)
+-  **End-to-End Flow**:
   - Add Product
   - Create Order
   - Get Order Details
   - Delete Order
   - Delete Product
-- ✅ Token Management: Reuses authentication token across test steps
-- 📎 Cucumber tags for filtering (`@e2e`, `@smoke`, `@regression`)
-- 💡 Modular and reusable step definitions
+-  Token Management: Reuses authentication token across test steps
+-  Cucumber tags for filtering (`@e2e`, `@smoke`, `@regression`)
+-  Modular and reusable step definitions
 
 ---
 
 ## Test Scenarios Covered
 
 **Feature: User Authentication**
+
 Successful login with valid credentials
 
 ❌ Login with invalid email
@@ -59,17 +46,19 @@ Login → Add Product → Create Order → Fetch Order Details → Delete Order 
 
 ---
 
-## 📂 Project Structure
+## Project Structure
 
-ecommerce-api-tests/
+```text
+ApiFramework/
 ├── src/test/java/
-│ ├── stepDefinitions/ # Step definitions for Cucumber
-│ ├── utils/ # Utilities (e.g., request builder, reusable methods)
-│ ├── runners/ # Test runners (JUnit)
-│ └── features/ # Gherkin scenarios (.feature files)
-├── pom.xml # Maven dependencies
-├── README.md # Project documentation
-└── reports/ # Test execution reports (HTML/JSON)
+│   ├── stepDefinitions/   # Step definitions for Cucumber
+│   ├── utils/             # Utilities (e.g., request builder, reusable methods)
+│   ├── runners/           # Test runners (JUnit)
+│   └── features/          # Gherkin scenarios (.feature files)
+├── pom.xml                # Maven dependencies
+├── README.md              # Project documentation
+└── /target/cucumber-reports              # Test execution reports (HTML/JSON)
+```
 
 ---
 
